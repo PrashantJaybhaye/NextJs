@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
 
-const Home = () => {
-  <>
+export default function Home() {
+  return (
+   <>
     <Button>Click Me</Button>
-  </>
-};
-
-export default Home;
+    <h2>Prashant</h2>
+   </>
+  );
+}
