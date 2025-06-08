@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -44,355 +45,127 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #18181b;
-  --card: #ffffff;
-  --card-foreground: #18181b;
-  --popover: #ffffff;
-  --popover-foreground: #18181b;
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.129 0.042 264.695);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.129 0.042 264.695);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.129 0.042 264.695);
   --primary: #e7c9a5;
-  --primary-admin: #25388c;
-  --green: #027a48;
-  --green-100: #ecfdf3;
-  --green-400: #4c7b62;
-  --green-500: #2cc171;
-  --green-800: #027a48;
-  --red: #ef3a4b;
-  --red-400: #f46f70;
-  --red-500: #e27233;
-  --red-800: #ef3a4b;
-  --blue-100: #0089f1;
-  --light-100: #d6e0ff;
-  --light-200: #eed1ac;
-  --light-300: #f8f8ff;
-  --light-400: #edf1f1;
-  --light-500: #8d8d8d;
-  --light-600: #f9fafb;
-  --light-700: #e2e8f0;
-  --light-800: #f8fafc;
-  --dark-100: #16191e;
-  --dark-200: #3a354e;
-  --dark-300: #232839;
-  --dark-400: #1e293b;
-  --dark-500: #0f172a;
-  --dark-600: #333c5c;
-  --dark-700: #464f6f;
-  --dark-800: #1e2230;
-  --gray-100: #cbd5e1;
-  --radius: 0.5rem;
+  --primary-foreground: #000;
+  --secondary: oklch(0.968 0.007 247.896);
+  --secondary-foreground: oklch(0.208 0.042 265.755);
+  --muted: oklch(0.968 0.007 247.896);
+  --muted-foreground: oklch(0.554 0.046 257.417);
+  --accent: oklch(0.968 0.007 247.896);
+  --accent-foreground: oklch(0.208 0.042 265.755);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.929 0.013 255.508);
+  --input: oklch(0.929 0.013 255.508);
+  --ring: oklch(0.704 0.04 256.788);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.984 0.003 247.858);
+  --sidebar-foreground: oklch(0.129 0.042 264.695);
+  --sidebar-primary: oklch(0.208 0.042 265.755);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.968 0.007 247.896);
+  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
+  --sidebar-border: oklch(0.929 0.013 255.508);
+  --sidebar-ring: oklch(0.704 0.04 256.788);
 }
 
 .dark {
-  --background: #18181b;
-  --foreground: #f1f5f9;
-  --card: #18181b;
-  --card-foreground: #f1f5f9;
-  --popover: #18181b;
-  --popover-foreground: #f1f5f9;
-  --primary: #e7c9a5;
-  --primary-admin: #25388c;
-  --green: #027a48;
-  --green-100: #ecfdf3;
-  --green-400: #4c7b62;
-  --green-500: #2cc171;
-  --green-800: #027a48;
-  --red: #ef3a4b;
-  --red-400: #f46f70;
-  --red-500: #e27233;
-  --red-800: #ef3a4b;
-  --blue-100: #0089f1;
-  --light-100: #d6e0ff;
-  --light-200: #eed1ac;
-  --light-300: #f8f8ff;
-  --light-400: #edf1f1;
-  --light-500: #8d8d8d;
-  --light-600: #f9fafb;
-  --light-700: #e2e8f0;
-  --light-800: #f8fafc;
-  --dark-100: #16191e;
-  --dark-200: #3a354e;
-  --dark-300: #232839;
-  --dark-400: #1e293b;
-  --dark-500: #0f172a;
-  --dark-600: #333c5c;
-  --dark-700: #464f6f;
-  --dark-800: #1e2230;
-  --gray-100: #cbd5e1;
+  --background: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.984 0.003 247.858);
+  --card: oklch(0.208 0.042 265.755);
+  --card-foreground: oklch(0.984 0.003 247.858);
+  --popover: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.984 0.003 247.858);
+  --primary: oklch(0.929 0.013 255.508);
+  --primary-foreground: oklch(0.208 0.042 265.755);
+  --secondary: oklch(0.279 0.041 260.031);
+  --secondary-foreground: oklch(0.984 0.003 247.858);
+  --muted: oklch(0.279 0.041 260.031);
+  --muted-foreground: oklch(0.704 0.04 256.788);
+  --accent: oklch(0.279 0.041 260.031);
+  --accent-foreground: oklch(0.984 0.003 247.858);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.551 0.027 264.364);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.208 0.042 265.755);
+  --sidebar-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.279 0.041 260.031);
+  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
-@layer utilities {
-  .hide-scrollbar::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
-    border-radius: 0px;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-
-  .hide-scrollbar::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  .hide-scrollbar::-webkit-scrollbar-thumb {
-    background: transparent;
-    border-radius: 0px;
-  }
-
-  .hide-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: transparent;
+  body {
+    @apply bg-background text-foreground font-medium;
   }
 }
 
-.form-btn {
-    @apply bg-primary text-dark-100 hover:bg-primary inline-flex min-h-14 w-full items-center justify-center rounded-md px-6 py-2 font-bold text-base !important;
-  }
+/* Work Here, */
 
-  .form-input {
-    @apply w-full min-h-14 border-none text-base font-bold placeholder:font-normal text-white placeholder:text-light-100 focus-visible:ring-0 focus-visible:shadow-none bg-dark-300 !important;
-  }
+.root-container {
+  @apply flex min-h-screen flex-1 flex-col bg-cover bg-top px-5 sm:px-10 md:px-16;
+  background-color: #16191e;
+  background-image: url("/images/pattern.webp");
+}
 
-  /* Book Card */
-  .book-title {
-    @apply mt-2 line-clamp-1 text-base font-semibold text-white xs:text-xl;
-  }
+.book-overview {
+  @apply flex flex-col-reverse items-center gap-12 sm:gap-32 xl:flex-row xl:gap-8;
+}
 
-  .book-genre {
-    @apply mt-1 line-clamp-1 text-sm italic text-light-100 xs:text-base;
-  }
+.book-overview h1 {
+  @apply text-5xl font-semibold text-white md:text-7xl;
+}
 
-  .book-loaned {
-    @apply flex flex-row items-center gap-1 max-xs:justify-center;
-  }
+.font1 {
+  font-family: "IBM Plex Sans", "sans-serif";
+}
 
-  .book-btn {
-    @apply bg-dark-600 mt-3 min-h-14 w-full font-bebas-neue text-base text-primary;
-  }
+.font2 {
+  font-family: "Bebas Neue", sans-serif;
+}
 
-  /* Borrowed Book */
-  .borrowed-book {
-    @apply gradient-vertical p-5 rounded-2xl xs:w-min w-full relative;
-  }
+.book-info {
+  @apply mt-7 flex flex-row flex-wrap gap-4 text-xl text-[#D6E0FF];
+}
 
-  .borrowed-book_cover {
-    @apply py-4 lg:px-16 px-10 flex justify-center items-center w-full rounded-lg;
-  }
+.book-copies {
+  @apply flex flex-row flex-wrap gap-4 mt-1;
+}
 
-  /* Book Cover */
-  .book-cover_extra_small {
-    @apply w-[28.95px] h-10;
-  }
+.book-copies p {
+  @apply text-xl text-[#D6E0FF];
+}
 
-  .book-cover_small {
-    @apply w-[55px] h-[76px];
-  }
+.book-copies p span {
+  @apply ml-2 font-semibold text-primary;
+}
 
-  .book-cover_medium {
-    @apply w-[144px] h-[199px];
-  }
+.book-description {
+  @apply mt-2 text-justify text-xl text-[#D6E0FF];
+}
 
-  .book-cover_regular {
-    @apply xs:w-[174px] w-[114px] xs:h-[239px] h-[169px];
-  }
-
-  .book-cover_wide {
-    @apply xs:w-[296px] w-[256px] xs:h-[404px] h-[354px];
-  }
-
-  /* Book List */
-  .book-list {
-    @apply mt-10 flex flex-wrap gap-5 max-xs:justify-between xs:gap-10;
-  }
-
-  /* Book Overview */
-  .book-overview {
-    @apply flex flex-col-reverse items-center gap-12 sm:gap-32 xl:flex-row xl:gap-8;
-  }
-
-  .book-overview h1 {
-    @apply text-5xl font-semibold text-white md:text-7xl;
-  }
-
-  .book-info {
-    @apply mt-7 flex flex-row flex-wrap gap-4 text-xl text-light-100;
-  }
-
-  .book-copies {
-    @apply flex flex-row flex-wrap gap-4 mt-1;
-  }
-
-  .book-copies p {
-    @apply text-xl text-light-100;
-  }
-
-  .book-copies p span {
-    @apply ml-2 font-semibold text-primary;
-  }
-
-  .book-description {
-    @apply mt-2 text-justify text-xl text-light-100;
-  }
-
-  .book-overview_btn {
-    @apply mt-4 min-h-14 w-fit bg-primary text-dark-100 hover:bg-primary/90 max-md:w-full !important;
-  }
-
-  /* File Upload */
-  .upload-btn {
-    @apply flex min-h-14 w-full items-center justify-center gap-1.5 rounded-md;
-  }
-
-  .upload-filename {
-    @apply mt-1 text-center text-xs;
-  }
-
-  .progress {
-    @apply rounded-full bg-green-800 p-0.5 text-center font-bebas-neue text-[8px] font-bold leading-none text-light-100;
-  }
-
-  /* Search */
-  .search {
-    @apply relative mt-10 flex min-h-14 w-full items-center rounded-xl bg-dark-300 px-4;
-  }
-
-  .search-input {
-    @apply w-full border-none font-bold placeholder:font-normal text-white placeholder:text-light-100 focus-visible:ring-0 focus-visible:shadow-none !important;
-  }
-
-  /* Book Receipt */
-  .book-receipt_admin-btn {
-    @apply bg-light-300 rounded-md text-primary-admin font-semibold hover:bg-light-300/80 !important;
-  }
-
-  /* Book Ticket */
-  #book-ticket {
-    @apply relative mt-10 hidden w-[544px] overflow-hidden bg-dark-300 py-8;
-  }
-
-  #book-ticket #book-details div {
-    @apply space-y-1 rounded-md border border-light-100/10 p-3;
-  }
-
-  #book-ticket #book-details div p:first-child {
-    @apply text-xs text-light-700;
-  }
-
-  #book-ticket #book-details div p:last-child {
-    @apply text-sm font-bold text-white;
-  }
-
-  #book-ticket #book-divider div:first-child {
-    @apply absolute -left-3.5 top-1/2 size-7 -translate-y-1/2 rounded-full bg-black;
-  }
-
-  #book-ticket #book-divider div:last-child {
-    @apply absolute -right-3.5 top-1/2 size-7 -translate-y-1/2 rounded-full bg-black;
-  }
-
-  .book-ticket-circles {
-    @apply absolute inset-x-0 -bottom-6 flex flex-row gap-1.5;
-  }
-
-  /* Not Found */
-  #not-found {
-    @apply flex justify-center items-center flex-col text-center w-full;
-  }
-
-  #not-found h4 {
-    @apply text-white mt-6 font-semibold text-2xl;
-  }
-
-  #not-found p {
-    @apply text-light-100 w-[360px] mt-1;
-  }
-
-  .not-found-btn {
-    @apply bg-primary font-bebas-neue min-w-[360px] mt-6 text-dark-100 text-xl hover:bg-primary/90 min-h-12 !important;
-  }
-
-  /* Pagination */
-  #pagination {
-    @apply flex flex-row justify-end gap-3;
-  }
-
-  .pagination-btn_light {
-    @apply bg-light-300 text-dark-300 hover:bg-light-300/70 !important;
-  }
-
-  .pagination-btn_dark {
-    @apply bg-dark-300 hover:bg-dark-100 !important;
-  }
-
-  #pagination p {
-    @apply text-sm inline-flex items-center font-semibold px-4 py-1.5 rounded-md text-center;
-  }
-
-  /* Sort */
-  .select-trigger {
-    @apply w-40 h-10 px-4 bg-dark-300 text-light-100 border-dark-100 !important;
-  }
-
-  .select-content {
-    @apply bg-dark-300 text-light-100 border-dark-100 !important;
-  }
-
-  .select-item {
-    @apply focus:bg-dark-600 focus:text-light-100 !important;
-  }
-
-
-  /* ------------------------------------------------------//utilis----------------------------------------- */
-
-  .gradient-vertical {
-    background: linear-gradient(180deg, #12141d 0%, #12151f 100%);
-  }
-
-  .gradient-gray {
-    background: linear-gradient(270deg, #37363a 0%, #353637 100%);
-  }
-
-  .gradient-blue {
-    background: linear-gradient(180deg, #232839 0%, #12141d 100%);
-  }
-
-  /* Auth */
-  .auth-container {
-    @apply relative flex flex-col-reverse text-light-100 sm:flex-row;
-  }
-
-  .auth-form {
-    @apply my-auto flex h-full min-h-screen flex-1 items-center bg-pattern bg-cover bg-top bg-dark-100 px-5 py-10;
-  }
-
-  .auth-box {
-    @apply gradient-vertical mx-auto flex max-w-xl flex-col gap-6 rounded-lg p-10;
-  }
-
-  .auth-illustration {
-    @apply sticky h-40 w-full sm:top-0 sm:h-screen sm:flex-1;
-  }
-
-  /* Root */
-  .root-container {
-    @apply flex min-h-screen flex-1 flex-col bg-pattern bg-cover bg-top bg-dark-100 px-5 xs:px-10 md:px-16;
-  }
-
-  /* Book Details */
-  .book-details {
-    @apply lg:mt-36 mt-16 mb-20 flex flex-col gap-16 lg:flex-row;
-  }
-
-  .book-details h3 {
-    @apply text-xl font-semibold text-primary;
-  }
-
-  /* Library */
-  .library {
-    @apply mx-auto flex max-w-xl w-full flex-col text-center;
-  }
-
-  .library-subtitle {
-    @apply text-lg font-semibold uppercase text-light-100;
-  }
-
-  .library-title {
-    @apply mt-2 text-3xl font-semibold text-white xs:text-5xl;
-  }
-
+.book-overview_btn {
+  @apply mt-4 min-h-14 w-fit bg-primary text-[#16191E] hover:bg-primary/90 max-md:w-full;
+}
