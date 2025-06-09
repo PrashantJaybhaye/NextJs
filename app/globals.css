@@ -167,5 +167,47 @@
 }
 
 .book-overview_btn {
-  @apply mt-4 min-h-14 w-fit bg-primary text-[#16191E] hover:bg-primary/90 max-md:w-full;
+  @apply mt-4 min-h-12 w-fit bg-primary text-[#16191E] hover:bg-primary/90 max-md:w-full;
+}
+
+/* Book Cover */
+.book-cover_extra_small {
+  @apply w-[28.95px] h-10;
+}
+
+.book-cover_small {
+  @apply w-[55px] h-[76px];
+}
+
+.book-cover_medium {
+  @apply w-[144px] h-[199px];
+}
+
+.book-cover_regular {
+  @apply sm:w-[174px] w-[114px] sm:h-[239px] h-[169px];
+}
+
+.book-cover_wide {
+  @apply sm:w-[296px] w-[256px] sm:h-[404px] h-[354px];
+}
+
+.book-list {
+  @apply mt-10 flex flex-wrap gap-5 max-sm:justify-between sm:gap-10;
+}
+
+.book-title {
+  @apply mt-2 line-clamp-1 text-base font-semibold text-white sm:text-xl;
+}
+
+.book-genre {
+  @apply mt-1 line-clamp-1 text-sm italic text-[#D6E0FF] sm:text-base;
+}
+
+.book-loaned {
+  @apply flex flex-row items-center gap-1 max-sm:justify-center;
+}
+
+.book-btn {
+  @apply bg-[#333C5C] mt-3 min-h-14 w-full text-base text-primary;
+  font-family: "Bebas Neue", sans-serif;
 }
