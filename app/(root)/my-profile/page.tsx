@@ -16,7 +16,14 @@ const page = () => {
             <Button>Logout</Button>
         </form>
 
-        <BookList title="Borrowed Books" books={sampleBooks}/>
+        <BookList
+            title="Borrowed Books"
+            books={(sampleBooks).map(book => ({
+                ...book,
+                color: book.coverColor,
+                video: book.videoUrl,
+            }))}
+        />
     </>
 }
 
