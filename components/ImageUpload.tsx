@@ -47,9 +47,11 @@ const ImageUpload = ({ onFileChange }: { onFileChange: (filePath: string) => voi
         boxShadow: "0 4px 24px rgba(244,67,54,0.15)",
         fontWeight: 600,
         letterSpacing: "0.02em",
-        fontSize: "1rem",
-        padding: "1rem 1.5rem",
+        fontSize: "0.9rem",
+        padding: "0.8rem 2rem",
+        minWidth: "320px",
       },
+      position: "top-right",
       icon: (
         <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
           <circle cx="12" cy="12" r="12" fill="#e57373" />

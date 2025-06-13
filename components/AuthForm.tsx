@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button"
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
@@ -18,6 +17,9 @@ import { Input } from "@/components/ui/input"
 import Link from 'next/link'
 import { FIELD_NAMES, FIELD_TYPES } from '@/constants'
 import ImageUpload from './ImageUpload'
+import { toast } from "sonner"
+import { useRouter } from 'next/navigation'
+
 
 interface Props<T extends FieldValues> {
     schema: ZodType<T>;
@@ -28,6 +30,7 @@ interface Props<T extends FieldValues> {
 
 const AuthForm = <T extends FieldValues>({ type, schema, defaultValues, onSubmit }: Props<T>) => {
 
+    const router = useRouter();
     const isSignIn = type === "SIGN_IN"
 
     const form: UseFormReturn<T> = useForm({
@@ -36,7 +39,56 @@ const AuthForm = <T extends FieldValues>({ type, schema, defaultValues, onSubmit
     })
 
     // 2. Define a submit handler.
-    const handleSubmit: SubmitHandler<T> = async (data) => { }
+    const handleSubmit: SubmitHandler<T> = async (data) => {
+        const result = await onSubmit(data);
+
+        if (result.success) {
+            toast.success(isSignIn ? 'Welcome back!' : 'Your account has been created successfully.', {
+                style: {
+                    background: "linear-gradient(90deg, #1e4a20 0%, #2e7d32 100%)",
+                    color: "#fff",
+                    borderRadius: "1rem",
+                    border: "none",
+                    boxShadow: "0 6px 32px rgba(46,125,50,0.18)",
+                    fontWeight: 700,
+                    letterSpacing: "0.03em",
+                    fontSize: "0.9rem",
+                    padding: "0.8rem 2rem",
+                    minWidth: "320px",
+                },
+                position: "top-right",
+                icon: (
+                    <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="12" fill="#43ea7a" />
+                        <path d="M8 12.5l2.5 2.5 5-5" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                ),
+            });
+            router.push('/')
+        } else {
+            toast.error(result.error || `Error ${isSignIn ? 'Signing In' : 'Signing Up'}`, {
+                style: {
+                    background: "linear-gradient(90deg, #4a1e1e 0%, #b71c1c 100%)",
+                    color: "#fff",
+                    borderRadius: "1rem",
+                    border: "none",
+                    boxShadow: "0 6px 32px rgba(183,28,28,0.18)",
+                    fontWeight: 700,
+                    letterSpacing: "0.03em",
+                    fontSize: "0.9rem",
+                    padding: "0.8rem 2rem",
+                    minWidth: "320px",
+                },
+                position: "top-right",
+                icon: (
+                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="12" fill="#ff5252" />
+                        <path d="M8 8l8 8M16 8l-8 8" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                ),
+            });
+        }
+    }
 
 
     return (
