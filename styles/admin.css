@@ -33,3 +33,16 @@
 .admin-header {
   @apply flex lg:items-end items-start justify-between lg:flex-row flex-col gap-1 sm:mb-10 mb-5;
 }
+
+.back-btn {
+  @apply mb-10 w-fit border border-[#E0E7FF] bg-[#EEF2FF] text-xs font-medium text-[#25388C] hover:bg-[#D1D5FA];
+}
+
+/* Book Form */
+.book-form_input {
+  @apply min-h-14 border border-[#CBD5E1] bg-[#D6E0FF] p-4 text-base font-semibold placeholder:font-normal placeholder:text-slate-500;
+}
+
+.book-form_btn {
+  @apply min-h-14 w-full bg-[#25388C] hover:bg-[#25388C]/95;
+}
