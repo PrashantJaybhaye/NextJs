@@ -11,7 +11,7 @@ const Home = async() => {
 
   return (
     <>
-      <BookOverview {...sampleBooks[0]} />
+      <BookOverview video={""} {...sampleBooks[0]} />
 
       <BookList
         title="Latest Books"

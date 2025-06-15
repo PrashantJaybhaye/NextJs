@@ -44,5 +44,5 @@
 }
 
 .book-form_btn {
-  @apply min-h-14 w-full bg-[#25388C] hover:bg-[#25388C]/95;
+  @apply min-h-10 w-full bg-[#25388C] hover:bg-[#25388C]/95;
 }
