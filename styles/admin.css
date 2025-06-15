@@ -6,7 +6,7 @@
 }
 
 .admin-sidebar {
-  @apply sticky left-0 top-0 flex h-dvh flex-col justify-between bg-white px-5 pb-5 pt-10;
+  @apply sticky left-0 top-0 flex h-dvh flex-col justify-between bg-white px-3 pb-5 pt-10;
 }
 
 .admin-sidebar .logo {
@@ -40,7 +40,7 @@
 
 /* Book Form */
 .book-form_input {
-  @apply min-h-14 border border-[#CBD5E1] bg-[#D6E0FF] p-4 text-base font-semibold placeholder:font-normal placeholder:text-slate-500;
+  @apply min-h-10 border border-[#CBD5E1] bg-[#D6E0FF] p-4 text-base font-semibold placeholder:font-normal placeholder:text-slate-500;
 }
 
 .book-form_btn {

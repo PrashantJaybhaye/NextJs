@@ -7,8 +7,8 @@ const page = () => {
     return (
         <>
             <Button asChild className='back-btn'>
-                <Link href="/admin/books" className=''>
-                    Back to books
+                <Link href="/admin/books" className='text-lg'>
+                    Go Back
                 </Link>
             </Button>
 
