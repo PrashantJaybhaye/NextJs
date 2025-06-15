@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+.admin-container {
+  @apply flex w-[calc(100%-264px)] flex-1 flex-col bg-[#F8F8FF] p-5 sm:p-10;
+}
+
+.admin-sidebar {
+  @apply sticky left-0 top-0 flex h-dvh flex-col justify-between bg-white px-5 pb-5 pt-10;
+}
+
+.admin-sidebar .logo {
+  @apply flex flex-row items-center gap-2 border-b border-dashed border-[#25388C]/20 pb-10 max-md:justify-center;
+}
+
+.admin-sidebar .logo h1 {
+  @apply text-2xl font-semibold text-[#25388C] max-md:hidden;
+}
+
+.admin-sidebar .link {
+  @apply flex flex-row items-center w-full gap-2 rounded-lg px-5 py-3.5 max-md:justify-center;
+}
+
+.admin-sidebar .link p {
+  @apply text-base font-medium max-md:hidden;
+}
+
+.admin-sidebar .user {
+  @apply my-8 flex w-full flex-row gap-2 rounded-full md:border md:border-[#EDF1F1] px-6 py-2 md:shadow-sm max-md:px-2;
+}
+
+/* Header */
+.admin-header {
+  @apply flex lg:items-end items-start justify-between lg:flex-row flex-col gap-1 sm:mb-10 mb-5;
+}
