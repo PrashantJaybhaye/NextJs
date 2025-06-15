@@ -241,9 +241,14 @@
 
 /* File Upload */
 .upload-btn {
-  @apply flex min-h-14 w-full items-center bg-[#232839] justify-center gap-1.5 rounded-md;
+  @apply flex min-h-14 w-full items-center /*bg-[#232839]  */ justify-center gap-1.5 rounded-md;
 }
 
 .upload-filename {
   @apply text-green-500 text-center text-xs;
+}
+
+.progress {
+  @apply rounded-full bg-green-800 p-0.5 text-center text-[8px] font-bold leading-none text-[#D6E0FF];
+  font-family: "Bebas Neue", sans-serif;
 }
