@@ -19,6 +19,8 @@ import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
 import FileUpload from '@/components/FileUpload'
 import ColorPicker from '../ColorPicker'
+import { createBook } from '@/lib/admin/actions/book'
+import { toast } from 'sonner'
 
 
 interface Props extends Partial<Book> {
@@ -48,7 +50,56 @@ const BookForm = ({
     })
 
     const onSubmit = async (values: z.infer<typeof bookSchema>) => {
-        console.log(values)
+        const result = await createBook(values);
+
+        if (result.success) {
+            toast.success('Book created successfully', {
+                style: {
+                    background: "linear-gradient(90deg, #1e4a20 0%, #2e7d32 100%)",
+                    color: "#fff",
+                    borderRadius: "1rem",
+                    border: "none",
+                    boxShadow: "0 6px 32px rgba(46,125,50,0.18)",
+                    fontWeight: 700,
+                    letterSpacing: "0.03em",
+                    fontSize: "0.9rem",
+                    padding: "0.8rem 2rem",
+                    minWidth: "320px",
+                },
+                position: "top-right",
+                icon: (
+                    <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="12" fill="#43ea7a" />
+                        <path d="M8 12.5l2.5 2.5 5-5" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                ),
+            });
+
+            router.push(`/admin/books/${result.data.id}`);
+
+        } else {
+            toast.error(`${result.message}`, {
+                style: {
+                    background: "linear-gradient(90deg, #4a1e1e 0%, #b71c1c 100%)",
+                    color: "#fff",
+                    borderRadius: "1rem",
+                    border: "none",
+                    boxShadow: "0 6px 32px rgba(183,28,28,0.18)",
+                    fontWeight: 700,
+                    letterSpacing: "0.03em",
+                    fontSize: "0.9rem",
+                    padding: "0.8rem 2rem",
+                    minWidth: "320px",
+                },
+                position: "top-right",
+                icon: (
+                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="12" fill="#ff5252" />
+                        <path d="M8 8l8 8M16 8l-8 8" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                ),
+            });
+        }
     }
 
 
@@ -253,7 +304,7 @@ const BookForm = ({
                                     folder="books/videos"
                                     varient="light"
                                     onFileChange={field.onChange}
-                                    // value={field.value}
+                                // value={field.value}
                                 />
                             </FormControl>
                             <FormMessage />
