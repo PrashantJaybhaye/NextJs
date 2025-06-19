@@ -252,3 +252,12 @@
   @apply rounded-full bg-green-800 p-0.5 text-center text-[8px] font-bold leading-none text-[#D6E0FF];
   font-family: "Bebas Neue", sans-serif;
 }
+
+/* Book Details */
+.book-details {
+  @apply lg:mt-36 mt-16 mb-20 flex flex-col gap-16 lg:flex-row;
+}
+
+.book-details h3 {
+  @apply text-xl font-semibold text-primary;
+}
