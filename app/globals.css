@@ -192,7 +192,7 @@
 }
 
 .book-list {
-  @apply mt-10 flex flex-wrap gap-5 max-sm:justify-between sm:gap-10;
+  @apply mt-10 flex flex-wrap gap-5 max-sm:justify-evenly sm:gap-10;
 }
 
 .book-title {
