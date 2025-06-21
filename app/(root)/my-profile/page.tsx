@@ -160,7 +160,7 @@ const page = async () => {
                 </div>
 
                 {/* Right: Borrowed Books */}
-                <div className="flex-1 min-w-0 max-sm:border p-4 rounded-2xl">
+                <div className="flex-1 min-w-0 ">
                     <BorrowBookList
                         title="Borrowed Books"
                         books={latestBooks}
