@@ -43,6 +43,7 @@ const AuthForm = <T extends FieldValues>({ type, schema, defaultValues, onSubmit
         const result = await onSubmit(data);
 
         if (result.success) {
+            router.push('/')
             toast.success(isSignIn ? 'Welcome back!' : 'Your account has been created successfully.', {
                 style: {
                     background: "linear-gradient(90deg, #1e4a20 0%, #2e7d32 100%)",
@@ -64,7 +65,6 @@ const AuthForm = <T extends FieldValues>({ type, schema, defaultValues, onSubmit
                     </svg>
                 ),
             });
-            router.push('/')
         } else {
             toast.error(result.error || `Error ${isSignIn ? 'Signing In' : 'Signing Up'}`, {
                 style: {

@@ -125,9 +125,11 @@
 /* Work Here, */
 
 .root-container {
-  @apply flex min-h-screen flex-1 flex-col bg-cover bg-top px-5 sm:px-10 md:px-16;
+  @apply flex min-h-screen flex-1 flex-col px-5 sm:px-10 md:px-16;
   background-color: #16191e;
   background-image: url("/images/banner1.jpg");
+  background-size: cover;
+  background-position: top;
 }
 
 .book-overview {
@@ -194,6 +196,9 @@
 .book-list {
   @apply mt-10 flex flex-wrap gap-5 max-sm:justify-evenly sm:gap-10;
 }
+.book-list_profile {
+  @apply mt-10 flex gap-5 max-sm:justify-evenly sm:gap-10;
+}
 
 .book-title {
   @apply mt-2 line-clamp-1 text-base font-semibold text-white sm:text-xl;
@@ -219,12 +224,14 @@
 
 .auth-form {
   @apply my-auto flex h-full min-h-screen flex-1 items-center bg-cover bg-top bg-[#16191E] px-5 py-10;
+  background-color: #16191e;
   background-image: url("/images/banner1.jpg");
+  background-size: cover;
+  background-position: top;
 }
 
 .auth-box {
   @apply mx-auto flex max-w-xl flex-col gap-6 rounded-lg p-10;
-  background: linear-gradient(180deg, #12141d 0%, #12151f 100%);
 }
 
 .auth-illustration {
