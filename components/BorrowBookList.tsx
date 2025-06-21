@@ -19,7 +19,7 @@ const BorrowBookList = ({ books, title }: { books: BorrowedBookItem[], title: st
         <div className="book-list">
         <h2 className='font2 text-4xl text-[#D6E0FF]'>{title}</h2>
             {books.map((book) => (
-                <div key={book.id} className="p-4 rounded-xl bg-white/5 shadow-lg text-white border border-white/10">
+                <div key={book.id} className="p-3 rounded-xl bg-white/5 shadow-lg text-white border border-white/10">
                     {/* Book Cover */}
                     <BookCover coverColor={book.coverColor} coverImage={book.coverUrl} />
                     

@@ -12,7 +12,7 @@ const Header = ({ session }: { session: Session }) => {
 
     return (
         <header className='my-10 flex justify-between gap-5'>
-            <Link href="/" className='flex flex-row items-center justify-center gap-3 text-[#D6E0FF] text-2xl'>
+            <Link href="/" className='flex flex-row items-center justify-center gap-1 text-[#D6E0FF] text-2xl'>
                 <Image src='/icons/logo1.svg' alt='logo' width={40} height={40} />
                 <span>Sidly</span>
             </Link>
