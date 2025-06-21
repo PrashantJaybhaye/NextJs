@@ -31,8 +31,8 @@ const page = async () => {
     console.log(latestBooks)
 
     return <>
-        <div className='sm:flex sm:flex-row'>
-            <div className="mb-6 w-full h-fit p-4 rounded-xl bg-[#1e293b] shadow border border-slate-700">
+        <div className='sm:flex sm:flex-row gap-7'>
+            <div className="mb-6 w-fit h-fit p-4 rounded-xl bg-[#1e293b] shadow border border-slate-700">
                 <p className="text-sm text-gray-300 mb-3">
                     Welcome, <span className="font-semibold">{session?.user?.name}</span>
                 </p>

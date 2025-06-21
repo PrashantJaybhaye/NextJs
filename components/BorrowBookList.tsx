@@ -15,9 +15,9 @@ type BorrowedBookItem = {
 
 const BorrowBookList = ({ books, title }: { books: BorrowedBookItem[], title: string; }) => (
 
-    <section className='book-details'>
-        <div className="book-list">
+    <section className='grid grid-cols-2 flex-col'>
         <h2 className='font2 text-4xl text-[#D6E0FF]'>{title}</h2>
+        <div className="book-list">
             {books.map((book) => (
                 <div key={book.id} className="p-3 rounded-xl bg-white/5 shadow-lg text-white border border-white/10">
                     {/* Book Cover */}
