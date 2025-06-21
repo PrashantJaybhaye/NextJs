@@ -14,8 +14,8 @@ const Sidebar = ({ session }: {session: Session}) => {
     return (
         <div className='admin-sidebar'>
             <div>
-                <div className='logo'>
-                    <Image src="/icons/admin/logo.svg" alt="logo" width={37} height={37} />
+                <div className='logo items-center justify-center'>
+                    <Image src="/icons/admin/logo1.svg" alt="logo" width={37} height={37} />
                     <h1>Sidly</h1>
                 </div>
                 <div className='mt-10 flex flex-col gap-5'>
@@ -40,7 +40,7 @@ const Sidebar = ({ session }: {session: Session}) => {
                     <AvatarFallback className='bg-amber-100'>{getInitials(session?.user?.name || 'SL')}</AvatarFallback>
                 </Avatar>
                 <div className='flex flex-col max-md:hidden'>
-                    <p className='font-semibold text-[#3A354E]'>{session?.user?.name}</p>
+                    <p className='font-semibold text-[#fff]'>{session?.user?.name}</p>
                     <p className='text-[#8D8D8D] text-xs'>{session?.user?.email}</p>
                 </div>
             </div>

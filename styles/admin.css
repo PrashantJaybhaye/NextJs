@@ -1,32 +1,34 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Main container */
 .admin-container {
-  @apply flex w-[calc(100%-264px)] flex-1 flex-col bg-[#F8F8FF] p-5 sm:p-10;
+  @apply flex w-[calc(100%-264px)] flex-1 flex-col bg-[#0d1117] p-5 sm:p-10;
 }
 
+/* Sidebar */
 .admin-sidebar {
-  @apply sticky left-0 top-0 flex h-dvh flex-col justify-between bg-white px-3 pb-5 pt-10;
+  @apply sticky left-0 top-0 flex h-dvh flex-col justify-between bg-[#161b22] px-3 pb-5 pt-10;
 }
 
 .admin-sidebar .logo {
-  @apply flex flex-row items-center gap-2 border-b border-dashed border-[#25388C]/20 pb-10 max-md:justify-center;
+  @apply flex flex-row items-center gap-2 border-b border-dashed border-white/20 pb-10 max-md:justify-center;
 }
 
 .admin-sidebar .logo h1 {
-  @apply text-2xl font-semibold text-[#25388C] max-md:hidden;
+  @apply text-2xl font-semibold text-white max-md:hidden;
 }
 
 .admin-sidebar .link {
-  @apply flex flex-row items-center w-full gap-2 rounded-lg px-5 py-3.5 max-md:justify-center;
+  @apply flex flex-row items-center w-full gap-2 rounded-lg px-5 py-3.5 hover:bg-white/10 max-md:justify-center;
 }
 
 .admin-sidebar .link p {
-  @apply text-base font-medium max-md:hidden;
+  @apply text-base font-medium text-white max-md:hidden;
 }
 
 .admin-sidebar .user {
-  @apply my-8 flex w-full flex-row gap-2 rounded-full md:border md:border-[#EDF1F1] px-6 py-2 md:shadow-sm max-md:px-2;
+  @apply my-8 flex w-full flex-row gap-2 rounded-full md:border md:border-white/10 px-6 py-2 md:shadow-sm max-md:px-2 bg-white/5;
 }
 
 /* Header */
@@ -35,19 +37,19 @@
 }
 
 .back-btn {
-  @apply mb-10 w-fit border border-[#E0E7FF] bg-[#EEF2FF] text-xs font-medium text-[#25388C] hover:bg-[#D1D5FA];
+  @apply mb-10 w-fit border border-[#374151] bg-[#1f2937] text-xs font-medium text-white hover:bg-[#334155];
 }
 
 /* Book Form */
 .book-form_input {
-  @apply min-h-10 border border-[#CBD5E1] bg-[#D6E0FF] p-4 text-base font-semibold placeholder:font-normal placeholder:text-slate-500;
+  @apply min-h-10 border border-[#374151] bg-[#1f2937] text-white p-4 text-base font-semibold placeholder:font-normal placeholder:text-gray-400;
 }
 
 .book-form_btn {
-  @apply min-h-12 w-full bg-[#25388C] hover:bg-[#25388C]/95;
+  @apply min-h-12 w-full bg-[#2563eb] hover:bg-[#1d4ed8] text-white;
 }
 
 .hex-input {
-  @apply h-full flex-1 bg-transparent outline-none;
+  @apply h-full flex-1 bg-transparent outline-none text-white;
   font-family: "Bebas Neue", sans-serif;
 }

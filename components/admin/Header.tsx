@@ -5,10 +5,10 @@ const Header = ({ session }: { session: Session }) => {
     return (
         <header className='admin-header max-sm:mt-4'>
             <div>
-                <h2 className='text-[#1E293B] font-semibold text-2xl'>
+                <h2 className='text-neutral-300 font-semibold text-2xl'>
                     {session?.user?.name || 'Admin Dashboard'}
                 </h2>
-                <p className="text-slate-500 text-base"> | Manage your site efficiently</p>
+                <p className="text-slate-400 text-base"> | Manage your site efficiently</p>
             </div>
             {/* <p>Search</p> */}
         </header>

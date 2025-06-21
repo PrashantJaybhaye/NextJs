@@ -18,7 +18,7 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
         .where(eq(books.id, id))
         .limit(1);
 
-    if (!bookDetails) redirect('/404')
+    if (!bookDetails) redirect('/error-404')
 
     return <>
         <BookOverview {...bookDetails} userId={session?.user?.id as string} />

@@ -94,7 +94,7 @@ const AuthForm = <T extends FieldValues>({ type, schema, defaultValues, onSubmit
     return (
         <div className='flex flex-col gap-4'>
             <h1 className='text-2xl font-semibold text-white'>
-                {isSignIn ? 'Welcome back to Sidly' : 'Create your library account'}
+                {isSignIn ? 'Welcome to Sidly' : 'Create your library account'}
             </h1>
             <p className='text-[#D6E0FF] text-base'>
                 {isSignIn
