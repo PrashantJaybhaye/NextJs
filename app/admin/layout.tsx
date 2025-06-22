@@ -7,6 +7,7 @@ import Header from '@/components/admin/Header';
 import { db } from '@/database/drizzle';
 import { users } from '@/database/schema';
 import { eq } from 'drizzle-orm';
+import { Toaster } from 'react-hot-toast';
 
 const layout = async ({ children }: { children: ReactNode }) => {
     const session = await auth();
@@ -31,6 +32,16 @@ const layout = async ({ children }: { children: ReactNode }) => {
             <div className='admin-container '>
                 <Header session={session} />
                 {children}
+                <Toaster
+                    position="top-right"
+                    toastOptions={{
+                        style: {
+                            background: '#1f2937',
+                            color: '#f9fafb',
+                            border: '1px solid #374151'
+                        }
+                    }}
+                />
             </div>
         </main>
     )

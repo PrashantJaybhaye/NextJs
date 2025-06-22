@@ -5,10 +5,7 @@ import { db } from '@/database/drizzle'
 import { books, borrowRecords, users } from '@/database/schema'
 import { desc, eq } from 'drizzle-orm'
 import React from 'react'
-import { LogOut, CheckCircle, XCircle, Clock } from 'lucide-react'
-import { Avatar, AvatarFallback } from '@/components/ui/avatar'
-import { getInitials } from '@/lib/utils'
-import { IKImage } from 'imagekitio-next'
+import { LogOut } from 'lucide-react'
 import ProfileId from '@/components/ProfileId'
 
 const page = async () => {
