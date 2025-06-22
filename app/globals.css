@@ -130,7 +130,6 @@
   background-image: url("/images/banner1.jpg");
   background-size: cover;
   background-position: top;
-  background-repeat: no-repeat;
 }
 
 .book-overview {
@@ -198,7 +197,7 @@
   @apply mt-10 flex flex-wrap gap-5 max-sm:justify-evenly sm:gap-10;
 }
 .book-list_profile {
-  @apply mt-10 flex gap-5 max-sm:justify-evenly sm:gap-10;
+  @apply mt-10;
 }
 
 .book-title {

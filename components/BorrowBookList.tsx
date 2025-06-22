@@ -31,16 +31,18 @@ const BorrowBookList = ({ books, title }: { books: BorrowedBookItem[], title: st
             </div>
         )
             : (
-                <div className="book-list_profile grid grid-cols-2">
+                <div className="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-3 gap-5 mt-10">
                     {books.map((book) => (
-                        <div key={book.id} className="p-3 rounded-xl bg-white/5 shadow-lg text-white border border-white/10">
+                        <div key={book.id} className="p-3 rounded-xl bg-white/5 shadow-lg text-white border border-white/10 truncate">
                             {/* Book Cover */}
-                            <BookCover coverColor={book.coverColor} coverImage={book.coverUrl} />
+                            <div className="flex justify-center"> {/* Add this wrapper */}
+                                <BookCover coverColor={book.coverColor} coverImage={book.coverUrl} />
+                            </div>
 
 
                             {/* Book Title & Genre */}
-                            <div className="mt-4 max-sm:max-w-32 sm:max-w-44">
-                                <h2 className="text-lg font-semibold line-clamp-1 leading-tight ">{book.title}</h2>
+                            <div className="mt-4 flex flex-col min-w-0">
+                                <h2 className="text-sm font-medium truncate min-w-0 max-w-[200px]">{book.title}</h2>
                                 <p className="text-sm text-gray-400">{book.genre}</p>
                             </div>
 
