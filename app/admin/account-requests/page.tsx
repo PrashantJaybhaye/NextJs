@@ -7,6 +7,7 @@ import { Eye } from 'lucide-react';
 import React from 'react';
 import { updateUserStatus } from '@/lib/actions/update-user-status';
 
+
 const Page = async () => {
     const userInfo = await db
         .select({
@@ -95,10 +96,10 @@ const Page = async () => {
                                 <td className="px-6 py-4">
                                     <span
                                         className={`inline-flex items-center text-xs font-semibold px-2.5 py-1 rounded-full ${user.status === 'APPROVED'
-                                                ? 'bg-green-900/50 text-green-300'
-                                                : user.status === 'REJECTED'
-                                                    ? 'bg-red-900/50 text-red-300'
-                                                    : 'bg-yellow-900/50 text-yellow-300' // This will handle both PENDING and null cases
+                                            ? 'bg-green-900/50 text-green-300'
+                                            : user.status === 'REJECTED'
+                                                ? 'bg-red-900/50 text-red-300'
+                                                : 'bg-yellow-900/50 text-yellow-300' // This will handle both PENDING and null cases
                                             }`}
                                     >
                                         {user.status || 'PENDING'} {/* Show PENDING if status is null */}
