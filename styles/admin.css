@@ -1,10 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-*{
-  @apply text-white
-}
-
 /* Main container */
 .admin-container {
   @apply flex w-[calc(100%-264px)] flex-1 flex-col bg-[#0d1117] p-5 sm:p-10;
@@ -56,4 +52,8 @@
 .hex-input {
   @apply h-full flex-1 bg-transparent outline-none text-white;
   font-family: "Bebas Neue", sans-serif;
+}
+
+.form-label {
+  @apply text-base text-white/80 mb-0.5;
 }

@@ -75,7 +75,7 @@ const BookForm = ({
                 ),
             });
 
-            router.push(`/admin/books/${result.data.id}`);
+            router.push(`/books/${result.data.id}`);
 
         } else {
             toast.error(`${result.message}`, {
@@ -115,7 +115,7 @@ const BookForm = ({
                     name="title"
                     render={({ field }) => (
                         <FormItem className='flex flex-col gap-1'>
-                            <FormLabel className='text-base text-black/80'>
+                            <FormLabel className='form-label'>
                                 Book Title
                             </FormLabel>
                             <FormControl>
@@ -137,7 +137,7 @@ const BookForm = ({
                     name="author"
                     render={({ field }) => (
                         <FormItem className='flex flex-col gap-1'>
-                            <FormLabel className='text-base text-black/80'>
+                            <FormLabel className='form-label'>
                                 Author
                             </FormLabel>
                             <FormControl>
@@ -159,7 +159,7 @@ const BookForm = ({
                     name="genre"
                     render={({ field }) => (
                         <FormItem className='flex flex-col gap-1'>
-                            <FormLabel className='text-base text-black/80'>
+                            <FormLabel className='form-label'>
                                 Genre
                             </FormLabel>
                             <FormControl>
@@ -176,63 +176,65 @@ const BookForm = ({
                         </FormItem>
                     )}
                 />
-                <FormField
-                    control={form.control}
-                    name="rating"
-                    render={({ field }) => (
-                        <FormItem className='flex flex-col gap-1'>
-                            <FormLabel className='text-base text-black/80'>
-                                Rating
-                            </FormLabel>
-                            <FormControl>
+                <div className='flex flex-row justify-stretch gap-5'>
+                    <FormField
+                        control={form.control}
+                        name="rating"
+                        render={({ field }) => (
+                            <FormItem className='flex flex-col gap-1'>
+                                <FormLabel className='form-label'>
+                                    Rating
+                                </FormLabel>
+                                <FormControl>
 
-                                <Input
-                                    type='number'
-                                    min={1}
-                                    max={5}
-                                    {...field}
-                                    required
-                                    placeholder='Book Rating'
-                                    className='book-form_input w-fit'
-                                />
+                                    <Input
+                                        type='number'
+                                        min={1}
+                                        max={5}
+                                        {...field}
+                                        required
+                                        placeholder='Book Rating'
+                                        className='book-form_input w-fit'
+                                    />
 
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
-                <FormField
-                    control={form.control}
-                    name="totalCopies"
-                    render={({ field }) => (
-                        <FormItem className='flex flex-col gap-1'>
-                            <FormLabel className='text-base text-black/80'>
-                                Total Copies
-                            </FormLabel>
-                            <FormControl>
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+                    <FormField
+                        control={form.control}
+                        name="totalCopies"
+                        render={({ field }) => (
+                            <FormItem className='flex flex-col gap-1'>
+                                <FormLabel className='form-label'>
+                                    Total Copies
+                                </FormLabel>
+                                <FormControl>
 
-                                <Input
-                                    type='number'
-                                    min={1}
-                                    max={1000}
-                                    {...field}
-                                    required
-                                    placeholder='Total Copies'
-                                    className='book-form_input w-fit'
-                                />
+                                    <Input
+                                        type='number'
+                                        min={1}
+                                        max={1000}
+                                        {...field}
+                                        required
+                                        placeholder='Total Copies'
+                                        className='book-form_input w-fit'
+                                    />
 
 
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+                </div>
                 <FormField
                     control={form.control}
                     name="coverUrl"
                     render={({ field }) => (
                         <FormItem className='flex flex-col gap-1'>
-                            <FormLabel className='text-base text-black/80'>
+                            <FormLabel className='form-label'>
                                 Book Image
                             </FormLabel>
                             <FormControl className=''>
@@ -241,7 +243,7 @@ const BookForm = ({
                                     accept="image/*"
                                     placeholder="Upload Book Cover"
                                     folder="books/covers"
-                                    varient="light"
+                                    varient="dark"
                                     onFileChange={field.onChange}
                                 />
                             </FormControl>
@@ -254,7 +256,7 @@ const BookForm = ({
                     name="coverColor"
                     render={({ field }) => (
                         <FormItem className='flex flex-col gap-1'>
-                            <FormLabel className='text-base text-black/80'>
+                            <FormLabel className='form-label'>
                                 Primary Color
                             </FormLabel>
                             <FormControl>
@@ -272,7 +274,7 @@ const BookForm = ({
                     name="description"
                     render={({ field }) => (
                         <FormItem className='flex flex-col gap-1'>
-                            <FormLabel className='text-base text-black/80'>
+                            <FormLabel className='form-label'>
                                 Book Description
                             </FormLabel>
                             <FormControl>
@@ -293,7 +295,7 @@ const BookForm = ({
                     name="videoUrl"
                     render={({ field }) => (
                         <FormItem className='flex flex-col gap-1'>
-                            <FormLabel className='text-base text-black/80'>
+                            <FormLabel className='form-label'>
                                 Book Trailer
                             </FormLabel>
                             <FormControl>
@@ -302,7 +304,7 @@ const BookForm = ({
                                     accept="video/*"
                                     placeholder="Upload Book Trailer"
                                     folder="books/videos"
-                                    varient="light"
+                                    varient="dark"
                                     onFileChange={field.onChange}
                                 // value={field.value}
                                 />
@@ -316,7 +318,7 @@ const BookForm = ({
                     name="summary"
                     render={({ field }) => (
                         <FormItem className='flex flex-col gap-1'>
-                            <FormLabel className='text-base text-black/80'>
+                            <FormLabel className='form-label'>
                                 Book Summary
                             </FormLabel>
                             <FormControl>
