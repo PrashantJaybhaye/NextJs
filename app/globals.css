@@ -234,6 +234,7 @@
 
 .auth-box {
   @apply mx-auto flex max-w-xl flex-col gap-6 rounded-lg p-10;
+  background: linear-gradient(180deg, #12141d 0%, #12151f 100%);
 }
 
 .auth-illustration {
