@@ -8,6 +8,7 @@ import { eq } from 'drizzle-orm'
 
 interface Props extends Book {
     userId: string;
+
 }
 
 const BookOverview = async ({
@@ -21,7 +22,7 @@ const BookOverview = async ({
     coverColor,
     coverUrl,
     id,
-    userId
+    userId,
 }: Props) => {
     const [user] = await db
         .select()
