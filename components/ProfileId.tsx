@@ -87,29 +87,114 @@ const ProfileId = ({ userInfo, session }: any) => {
                 <div className="col-span-2">
                     <p className="text-xs text-gray-500 mb-1">Account Status</p>
                     <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                        <p className="text-sm text-gray-300 font-medium">Active</p>
+                        <div className={`w-2 h-2 rounded-full ${
+                            userInfo?.verificationStatus === 'REJECTED' ? 'bg-red-500' : 'bg-green-500'
+                        }`}></div>
+                        <p className="text-sm text-gray-300 font-medium">
+                            {userInfo?.verificationStatus === 'REJECTED' ? 'Rejected' : 'Active'}
+                        </p>
                     </div>
                 </div>
             </div>
 
-            {userInfo?.avatarUrl && (
-                <div className='mb-3 border border-slate-700 rounded-md overflow-hidden'>
-                    <IKImage
-                        path={userInfo?.avatarUrl}
-                        urlEndpoint={config.env.imagekit.urlEndpoint}
-                        alt='Book Cover'
-                        width={500}
-                        height={300}
-                        transformation={[{
-                            quality: 80, // Fixed: changed from string to number
-                        }]}
-                        className='w-full h-auto max-h-44 object-contain'
-                        loading='lazy'
-                        lqip={{ active: true }}
-                    />
+            {/* Student ID Card */}
+            <div className="mb-6 bg-gradient-to-br from-slate-800 to-slate-900 rounded-lg border border-slate-700 overflow-hidden">
+                <div className="p-3 border-b border-slate-700 flex justify-between items-center">
+                    <h3 className="text-lg font-medium text-gray-100">Student ID Card</h3>
+                    <span className="text-xs text-slate-400">ID: {userInfo?.studentId}</span>
                 </div>
-            )}
+
+                <div className="p-4 flex flex-col md:flex-row gap-4">
+                    {/* University Card Image */}
+                    <div className="flex-shrink-0 flex flex-col items-center gap-2">
+                        <div className={`w-20 h-20 rounded-md flex items-center justify-center border overflow-hidden ${
+                            userInfo?.verificationStatus === 'REJECTED' 
+                                ? 'bg-rose-900/20 border-rose-700' 
+                                : 'bg-slate-700 border-slate-600'
+                        }`}>
+                            {userInfo?.universityCard ? (
+                                <img
+                                    src={userInfo.universityCard}
+                                    alt="University card"
+                                    className="w-full h-full object-cover"
+                                />
+                            ) : (
+                                <svg
+                                    className={`w-10 h-10 ${
+                                        userInfo?.verificationStatus === 'REJECTED' 
+                                            ? 'text-rose-400' 
+                                            : 'text-slate-400'
+                                    }`}
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={1.5}
+                                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                                    />
+                                </svg>
+                            )}
+                        </div>
+                        <div className={`text-xs ${
+                            userInfo?.verificationStatus === 'REJECTED' 
+                                ? 'text-rose-400' 
+                                : 'text-slate-400'
+                        }`}>
+                            {userInfo?.verificationStatus === 'APPROVED' 
+                                ? 'Verified ID' 
+                                : userInfo?.verificationStatus === 'REJECTED'
+                                    ? 'Rejected ID'
+                                    : 'Verification Pending'}
+                        </div>
+                    </div>
+
+                    {/* User Details */}
+                    <div className="flex-grow">
+                        <div className="mb-3">
+                            <h4 className="text-lg font-semibold text-white">{userInfo?.fullName}</h4>
+                            <p className={`text-xs ${
+                                userInfo?.verificationStatus === 'REJECTED' 
+                                    ? 'text-rose-300' 
+                                    : 'text-slate-300'
+                            }`}>
+                                {userInfo?.role || 'Student'}
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <p className="text-slate-400">Email</p>
+                                <p className="text-white font-medium truncate">{userInfo?.email}</p>
+                            </div>
+                            <div>
+                                <p className="text-slate-400">Status</p>
+                                <div className="flex items-center gap-1">
+                                    <span className={`w-2 h-2 rounded-full ${
+                                        userInfo?.verificationStatus === 'APPROVED' 
+                                            ? 'bg-green-500'
+                                            : userInfo?.verificationStatus === 'REJECTED'
+                                                ? 'bg-red-500'
+                                                : 'bg-amber-500'
+                                    }`}></span>
+                                    <span className="text-white font-medium capitalize">
+                                        {userInfo?.verificationStatus?.toLowerCase()}
+                                    </span>
+                                </div>
+                            </div>
+                            <div className="col-span-2">
+                                <p className="text-slate-400">Last Active</p>
+                                <p className="text-white font-medium">
+                                    {new Date(userInfo?.Created).toLocaleDateString()}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

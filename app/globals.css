@@ -129,6 +129,7 @@
   background-color: #16191e;
   background-image: url("/images/banner1.jpg");
   background-size: cover;
+  background-repeat: repeat;
   background-position: top;
 }
 
@@ -227,6 +228,7 @@
   background-color: #16191e;
   background-image: url("/images/banner1.jpg");
   background-size: cover;
+  background-repeat: repeat;
   background-position: top;
 }
 

@@ -39,7 +39,8 @@ const page = async () => {
             email: users.email,
             studentId: users.universityId,
             verificationStatus: users.status,
-            avatarUrl: users.universityCard
+            avatarUrl: users.universityCard,
+            Created: users?.lastActivityDate,
         })
         .from(users)
         .where(eq(users.id, userId))
